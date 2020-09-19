@@ -1,4 +1,0 @@
-hello
-gitignore
-conflict
-log
