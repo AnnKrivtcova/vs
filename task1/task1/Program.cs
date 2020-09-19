@@ -247,11 +247,17 @@ namespace task1
             var _ = 9;
             Console.WriteLine(_);
 
-//сравнить два кортежа
+            //сравнить два кортежа
             (int a, long b) left = (50, 12450);
             (long a, int b) right = (50, 10);
-            Console.WriteLine(left == right);  // output: True
-            Console.WriteLine(left != right);  // output: False
+            if (left == right)
+            {
+                Console.WriteLine("Кортежи равны");  // output: True
+            }
+            else
+            {
+                Console.WriteLine("Кортежи не равны");  // output: False
+            }
 
             //TASK5
             Tuple<int, int, int, char> LocalFunc(int[] array, string text)
