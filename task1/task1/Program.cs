@@ -290,7 +290,7 @@ namespace task1
                 int maxIntValue = 2147483647;
                 try
                 {                  
-                    z = maxIntValue + 10;
+                    z = unchecked(maxIntValue + 10);
                 }
                 catch (System.OverflowException e)
                 {
