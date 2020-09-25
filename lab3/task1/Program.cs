@@ -57,22 +57,21 @@ namespace task1
         }
         public Product()//конструктор без параметров
         {
-            Name = "Milk";
-            UPC = 123;
-            Producer = "Belarus";
-            Price = 2;
-            StoragePeriod = 3;
-            Amount = 25;
+            Name = "";
+            UPC = 0;
+            Producer = "";
+            Price = 0;
+            StoragePeriod = 0;
+            Amount = 0;
             Count++;
         }
-        public Product(string Prod)//с параметрами
+        public Product(string Name = "", string Producer = "", int Price = 0, int StoragePeriod = 0, int Amount = 0)//с параметрами
         {
-            Name = "Milk";
-            UPC = 123;
-            Producer = Prod;
-            Price = 2;
-            StoragePeriod = 3;
-            Amount = 25;
+            this.Name = Name;
+            this.Producer = Producer;
+            this.Price = Price;
+            this.StoragePeriod = StoragePeriod;
+            this.Amount = Amount;
             Count++;
         }
         public Product(string Name, int UPC, string Producer, int Price, int StoragePeriod, int Amount)//с парам по умолчанию
@@ -165,10 +164,11 @@ namespace task1
             Product second = new Product("Bread", 124, "Gomel", 1, 10, 50);
             Product third = new Product("Milk", 125, "Moscow", 5, 60, 10);
             Product forth = new Product("Cheese", 126, "Bereza", 3, 10, 20);
-            var fifth= new Product("Chicken", 127, "Pinsk", 6, 15, 30);//анонимный тип
-            Product[] AllProducts = new Product[] { first, second, third, forth, fifth };//массив объектов
+            
+            Product[] AllProducts = new Product[] { first, second, third, forth};//массив объектов
 
             Product.InfoClass();
+            var fifth = new { Name = "Chicken", UPC = 127, Producer = "Pinsk", Price = 6, StoragePeriod = 15, Amount = 30 };//анонимный тип
 
             Console.WriteLine("Enter the name of the product:");
             string EnteredName = Console.ReadLine();
