@@ -47,15 +47,16 @@ namespace task1
             get{return amount;}
             set{amount = value;}
         }
-
-        public static int Count = 0;//статическое поле
+        public static int Stat;
+        public int Count = 0;//статическое поле
         public const int Cost = 15;//поле-константа
         public static string Info = "This class about some products. It contains some information about products";
         static Product()//статический конструктор
         {
+            Stat = 0;
             Console.WriteLine("Static constructer");
         }
-        public Product()//конструктор без параметров
+        public Product()//конструктор по умолчанию
         {
             Name = "";
             UPC = 0;
@@ -65,7 +66,7 @@ namespace task1
             Amount = 0;
             Count++;
         }
-        public Product(string Name = "", string Producer = "", int Price = 0, int StoragePeriod = 0, int Amount = 0)//с параметрами
+        /*public Product(string Name = "", string Producer = "", int Price = 0, int StoragePeriod = 0, int Amount = 0)//с параметрами по умолчанию
         {
             this.Name = Name;
             this.Producer = Producer;
@@ -73,8 +74,8 @@ namespace task1
             this.StoragePeriod = StoragePeriod;
             this.Amount = Amount;
             Count++;
-        }
-        public Product(string Name, int UPC, string Producer, int Price, int StoragePeriod, int Amount)//с парам по умолчанию
+        }*/
+        public Product(string Name, int UPC, string Producer, int Price, int StoragePeriod, int Amount)//с парам 
         {
             this.Name = Name;
             this.UPC = UPC;
@@ -100,10 +101,11 @@ namespace task1
             Console.WriteLine("Storage Period: " + StoragePeriod);
             Console.WriteLine("Amount: " + Amount);
          }
-        /*закрытый конструктор
-        Product()
+        //закрытый конструктор
+        Product(string Name)
         {
-        }*/
+            this.Name = Name;
+        }
         public static int PriceOfProduct(int Amount,int Price,string Name)
         {
             int k = Amount * Price;            
@@ -119,36 +121,14 @@ namespace task1
             return price;
         }
 
-        //??переопределяете методы класса Object: Equals, для сравнения объектов,  
-        //GetHashCode; для алгоритма вычисления хэша руководствуйтесь стандартными 
-        //рекомендациями, ToString – вывода строки –информации об объекте.
-        /*public override bool Equals(object obj)
-        {
-            return obj is Product product &&
-                   NameProperties == product.NameProperties;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(NameProperties);
-        }*/
         public override bool Equals(object obj)
         {
-            if (obj == null)
-                return false;
-            Product pr = obj as Product;
-            if (pr as Product == null)
-                return false;
-
-            return pr.name == this.name;
+            return obj is Product product &&
+                   Name == product.Name;
         }
         public override int GetHashCode()
-        {
-            int NameProp;
-            if (Name == "Milk")
-                NameProp = 1;
-            else NameProp = 2;
-            return (int)Amount + NameProp;
+        {   
+            return HashCode.Combine(Name);
         }
         public override string ToString()
         {
@@ -163,7 +143,7 @@ namespace task1
             Product first = new Product("Milk", 123, "Minsk", 2, 3, 25);
             Product second = new Product("Bread", 124, "Gomel", 1, 10, 50);
             Product third = new Product("Milk", 125, "Moscow", 5, 60, 10);
-            Product forth = new Product("Cheese", 126, "Bereza", 3, 10, 20);
+            Product forth = new Product("Cheese", 125, "Moscow", 5, 60, 10);
             
             Product[] AllProducts = new Product[] { first, second, third, forth};//массив объектов
 
@@ -192,7 +172,7 @@ namespace task1
             int counter2 = 0;
             foreach (Product SomeProduct in AllProducts)
             {
-                if ((SomeProduct.Name==EnteredName)&&(SomeProduct.Price<=EnteredPrice))
+                if ((SomeProduct.Name==EnteredName2)&&(SomeProduct.Price<=EnteredPrice))
                 { SomeProduct.Print();Console.WriteLine();counter2++; }
             }
 
@@ -210,10 +190,4 @@ namespace task1
 }
 
 
-partial class Product//частичный класс
-{
-    public void FirstMethod()
-    {
-        Console.WriteLine("Hello!");
-    }
-}
+
