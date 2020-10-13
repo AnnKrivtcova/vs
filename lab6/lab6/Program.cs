@@ -20,9 +20,9 @@ namespace lab6
     {
         public string type;
         public string Type { get; set; }
-        public Land(string a = "")
+        public Land()
         {
-            type = a;
+            type = "land";
         }
         public override void DoClone()//реализация одноименного метода
         {
@@ -35,10 +35,10 @@ namespace lab6
     {
         public string continentname;
         public string ContinentName { get; set; }
-        public Continent(string a = "", string b = "") : base(a)
+        public Continent(string b = "")
         {
-            type = a;
             continentname = b;
+
         }
         public override string ToString()
         {
@@ -69,9 +69,9 @@ namespace lab6
     {
         public string type1;
         public string Type1 { get; set; }
-        public Water(string a = "")
+        public Water()
         {
-            type1 = a;
+            type1 = "water";
         }
         public override string ToString()
         {
@@ -79,7 +79,7 @@ namespace lab6
         }
         public new void DoClone()
         {
-            Console.WriteLine("Interface - " + type1);
+            Console.WriteLine("New method 2" );
         }
     }
     public class Island : Water
@@ -87,10 +87,9 @@ namespace lab6
         public string islandname;
         public string IslandName { get; set; }
         public int Square { get; set; }
-        public Island(string b = "", string a = "water")
+        public Island(string b = "")
         {
             islandname = b;
-            type1 = a;
         }
 
         public override bool Equals(object obj)//переопределение методов от Object
@@ -112,10 +111,9 @@ namespace lab6
     {
         public string seaname;
         public string SeaName { get; set; }
-        public Sea(string b = "", string a = "water")
+        public Sea(string b = "")
         {
             seaname = b;
-            type1 = a;
         }
         public override string ToString()
         {
@@ -319,9 +317,9 @@ namespace lab6
     {
         static void Main(string[] args)
         {  
-            Continent africa = new Continent("land", "Africa");
+            Continent africa = new Continent("Africa");
             africa.DoClone();
-            Continent southamerica = new Continent("land", "South America");           
+            Continent southamerica = new Continent("South America");           
             State belarus = new State("Belarus");         
             State uar = new State("Africa","UAR");         
             State gambia = new State("Africa", "Gambia");
@@ -333,13 +331,13 @@ namespace lab6
             Island andros = new Island("Andros");
             Sea red = new Sea("Red");
             Sea salt = new Sea("Salt");
-            Water water = new Water("water");
+            Water water = new Water();
 
             Sea black = water as Sea; //оператор as
             if (black == null)
-                Console.WriteLine("Fail");
+                Console.WriteLine("\nFail");
             else
-                Console.WriteLine("Success");
+                Console.WriteLine("\nSuccess");
 
             if (kipr is Island)   //оператор is
             {

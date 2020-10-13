@@ -4,43 +4,48 @@ namespace lab5
 {
     interface ICloneable//интерфейс
     {
-        void DoClone();
+        void Method();
     }
-    public abstract class BaseClone //абстрактный класс
+    public abstract class BaseClass //абстрактный класс
     {
-        public abstract void DoClone();
+        public abstract void Method();
     }
-    public abstract class Land : BaseClone, ICloneable
+    public class Land : BaseClass, ICloneable
     {
         public string type;
         public string Type { get; set; }
-        public Land(string a = "")
+        public Land()
         {
-            type = a;
+            type = "land";
         }
         public override string ToString()
         {
             return $"{GetType()} {type}";
         }
-        public override void DoClone()//реализация одноименного метода
+        void ICloneable.Method()
         {
             Console.WriteLine("New method 1");
-        }      
+        }
+        public override void Method()
+        {
+            Console.WriteLine("New method 2");
+        }
+       
     }
     public class Continent : Land
     {
         public string continentname;
         public string ContinentName { get; set; }
-        public Continent(string a = "", string b = "") : base(a)
+        public Continent(string b = "") : base()
         {
-            type = a;
             continentname = b;
         }
         public override string ToString()
         {
-            return $"{GetType()} {continentname}";
-        }   
-       
+            return $"{GetType()} {continentname} ";
+        }
+        
+
     }
     public class State : Continent
     {
@@ -60,35 +65,38 @@ namespace lab5
         }
     }
 
-    public class Water : Land, ICloneable
+    public class Water 
     {
-        public string type1;
-        public string Type1 { get; set; }
-        public Water(string a = "")
+        public string type;
+        public string Type { get; set; }
+        public Water()
         {
-            type1 = a;
+            type = "Water";
         }
         public override string ToString()
         {
-            return $"{GetType()} {type1}";
+            return $"{GetType()} {type}";
         }
-        public new void DoClone()
+        public virtual void SayHello()
         {
-            Console.WriteLine("Interface - " + type1);
+            Console.WriteLine("Hello");
         }
     }
     public sealed class Sea : Water//запечатанный класс
     {
         public string seaname;
         public string SeaName { get; set; }
-        public Sea(string b = "", string a = "water")
+        public Sea(string b = ""):base()
         {
             seaname = b;
-            type1 = a;
         }
         public override string ToString()
         {
             return $"{GetType()} {seaname}";
+        }
+        public override void SayHello()
+        {
+            Console.WriteLine("Hello 2");
         }
 
     }
@@ -97,10 +105,9 @@ namespace lab5
         public string islandname;
         public string IslandName { get; set; }
         public int Square { get; set; }
-        public Island(string b = "", string a = "water")
+        public Island(string b = "") : base()
         {
             islandname = b;
-            type1 = a;
         }
         public override bool Equals(object obj)//переопределение методов от Object
         {
@@ -113,16 +120,15 @@ namespace lab5
         }
         public override string ToString()
         {
-            Console.WriteLine(GetType() + islandname);
-            return islandname;
+            return $"{GetType()} {islandname}";
         }
 
     }
-    class Printer
+    class Printer 
     {
-        public void IAmPrinting(Land someobj)//полиморфный метод
+        public void IAmPrinting(Land someobj)
         {
-            Console.WriteLine("Type of the object - " + someobj.GetType());
+            Console.WriteLine("\nType of the object - " + someobj.GetType());
             Console.WriteLine(someobj.ToString());
         }
     }
@@ -131,21 +137,24 @@ namespace lab5
     {
         static void Main(string[] args)
         {
-            Continent africa = new Continent("land", "Africa");
-            africa.DoClone();
+            Continent africa = new Continent("Africa");
+            ((ICloneable)africa).Method();
+            africa.Method();
             State belarus = new State("Belarus");
             belarus.DoClone();
 
             Island kipr = new Island("Kipr");          
             Sea red = new Sea("Red");          
-            Water water = new Water("water");
+            Water water = new Water();
+            water.SayHello();
+            red.SayHello();
             
 
             Sea black = water as Sea; //оператор as
             if (black == null)
-                Console.WriteLine("Fail");
+                Console.WriteLine("\nFail");
             else
-                Console.WriteLine("Success");
+                Console.WriteLine("\nSuccess");
 
             if (kipr is Island)   //оператор is
                 Console.WriteLine("Kipr is an island");
@@ -153,7 +162,7 @@ namespace lab5
                 Console.WriteLine("Kipr is not anisland");
 
             dynamic[] arrayOfObjects = new dynamic[] { africa, belarus };// массив, содержащий ссылки на разнотипные объекты
-            Printer printer = new Printer(); //объект класса Printer
+            Printer printer = new Printer(); 
             printer.IAmPrinting(africa);
             printer.IAmPrinting(belarus);
 
