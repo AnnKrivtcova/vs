@@ -1,0 +1,20 @@
+﻿  Source.cpp
+d:\ksis\lab7\lab7\source.cpp(8): warning C4005: _WINSOCK_DEPRECATED_NO_WARNINGS: изменение макроопределения
+  d:\ksis\lab7\lab7\source.cpp: note: см. предыдущее определение "_WINSOCK_DEPRECATED_NO_WARNINGS"
+d:\ksis\lab7\lab7\source.cpp(11): warning C4005: IP_DEST_NET_UNREACHABLE: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(173): note: см. предыдущее определение "IP_DEST_NET_UNREACHABLE"
+d:\ksis\lab7\lab7\source.cpp(12): warning C4005: IP_DEST_HOST_UNREACHABLE: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(174): note: см. предыдущее определение "IP_DEST_HOST_UNREACHABLE"
+d:\ksis\lab7\lab7\source.cpp(13): warning C4005: IP_DEST_PROT_UNREACHABLE: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(175): note: см. предыдущее определение "IP_DEST_PROT_UNREACHABLE"
+d:\ksis\lab7\lab7\source.cpp(14): warning C4005: IP_DEST_PORT_UNREACHABLE: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(176): note: см. предыдущее определение "IP_DEST_PORT_UNREACHABLE"
+d:\ksis\lab7\lab7\source.cpp(15): warning C4005: IP_REQ_TIMED_OUT: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(181): note: см. предыдущее определение "IP_REQ_TIMED_OUT"
+d:\ksis\lab7\lab7\source.cpp(16): warning C4005: IP_BAD_REQ: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(182): note: см. предыдущее определение "IP_BAD_REQ"
+d:\ksis\lab7\lab7\source.cpp(17): warning C4005: IP_BAD_ROUTE: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(183): note: см. предыдущее определение "IP_BAD_ROUTE"
+d:\ksis\lab7\lab7\source.cpp(18): warning C4005: IP_TTL_EXPIRED_TRANSIT: изменение макроопределения
+  d:\windows kits\10\include\10.0.17134.0\um\ipexport.h(184): note: см. предыдущее определение "IP_TTL_EXPIRED_TRANSIT"
+  Lab7.vcxproj -> D:\KSIS\Lab7\Debug\Lab7.exe
