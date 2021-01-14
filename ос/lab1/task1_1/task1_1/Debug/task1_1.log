@@ -1,0 +1,7 @@
+﻿  task1_1.cpp
+D:\3 sem\ОС\lab1\task1_1\task1_1\task1_1.cpp(26,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "long double"
+D:\3 sem\ОС\lab1\task1_1\task1_1\task1_1.cpp(13,9): warning C4101: res: неиспользованная локальная переменная
+D:\3 sem\ОС\lab1\task1_1\task1_1\task1_1.cpp(51,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "unsigned __int64"
+D:\3 sem\ОС\lab1\task1_1\task1_1\task1_1.cpp(51,9): message : рекомендуется использовать "%lld" в строке форматирования
+D:\3 sem\ОС\lab1\task1_1\task1_1\task1_1.cpp(51,9): message : рекомендуется использовать "%I64d" в строке форматирования
+  task1_1.vcxproj -> D:\3 sem\ОС\lab1\task1_1\Debug\task1_1.exe
