@@ -1,0 +1,13 @@
+D:\3 sem\ООП\lab8\lab8\lab8\bin\Debug\netcoreapp3.1\lab8.exe
+D:\3 sem\ООП\lab8\lab8\lab8\bin\Debug\netcoreapp3.1\lab8.deps.json
+D:\3 sem\ООП\lab8\lab8\lab8\bin\Debug\netcoreapp3.1\lab8.runtimeconfig.json
+D:\3 sem\ООП\lab8\lab8\lab8\bin\Debug\netcoreapp3.1\lab8.runtimeconfig.dev.json
+D:\3 sem\ООП\lab8\lab8\lab8\bin\Debug\netcoreapp3.1\lab8.dll
+D:\3 sem\ООП\lab8\lab8\lab8\bin\Debug\netcoreapp3.1\lab8.pdb
+D:\3 sem\ООП\lab8\lab8\lab8\obj\Debug\netcoreapp3.1\lab8.csprojAssemblyReference.cache
+D:\3 sem\ООП\lab8\lab8\lab8\obj\Debug\netcoreapp3.1\lab8.AssemblyInfoInputs.cache
+D:\3 sem\ООП\lab8\lab8\lab8\obj\Debug\netcoreapp3.1\lab8.AssemblyInfo.cs
+D:\3 sem\ООП\lab8\lab8\lab8\obj\Debug\netcoreapp3.1\lab8.csproj.CoreCompileInputs.cache
+D:\3 sem\ООП\lab8\lab8\lab8\obj\Debug\netcoreapp3.1\lab8.dll
+D:\3 sem\ООП\lab8\lab8\lab8\obj\Debug\netcoreapp3.1\lab8.pdb
+D:\3 sem\ООП\lab8\lab8\lab8\obj\Debug\netcoreapp3.1\lab8.genruntimeconfig.cache
