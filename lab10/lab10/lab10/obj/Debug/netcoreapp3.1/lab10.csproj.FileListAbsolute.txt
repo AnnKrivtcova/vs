@@ -1,0 +1,13 @@
+D:\3 sem\ООП\lab10\lab10\lab10\bin\Debug\netcoreapp3.1\lab10.exe
+D:\3 sem\ООП\lab10\lab10\lab10\bin\Debug\netcoreapp3.1\lab10.deps.json
+D:\3 sem\ООП\lab10\lab10\lab10\bin\Debug\netcoreapp3.1\lab10.runtimeconfig.json
+D:\3 sem\ООП\lab10\lab10\lab10\bin\Debug\netcoreapp3.1\lab10.runtimeconfig.dev.json
+D:\3 sem\ООП\lab10\lab10\lab10\bin\Debug\netcoreapp3.1\lab10.dll
+D:\3 sem\ООП\lab10\lab10\lab10\bin\Debug\netcoreapp3.1\lab10.pdb
+D:\3 sem\ООП\lab10\lab10\lab10\obj\Debug\netcoreapp3.1\lab10.csprojAssemblyReference.cache
+D:\3 sem\ООП\lab10\lab10\lab10\obj\Debug\netcoreapp3.1\lab10.AssemblyInfoInputs.cache
+D:\3 sem\ООП\lab10\lab10\lab10\obj\Debug\netcoreapp3.1\lab10.AssemblyInfo.cs
+D:\3 sem\ООП\lab10\lab10\lab10\obj\Debug\netcoreapp3.1\lab10.csproj.CoreCompileInputs.cache
+D:\3 sem\ООП\lab10\lab10\lab10\obj\Debug\netcoreapp3.1\lab10.dll
+D:\3 sem\ООП\lab10\lab10\lab10\obj\Debug\netcoreapp3.1\lab10.pdb
+D:\3 sem\ООП\lab10\lab10\lab10\obj\Debug\netcoreapp3.1\lab10.genruntimeconfig.cache

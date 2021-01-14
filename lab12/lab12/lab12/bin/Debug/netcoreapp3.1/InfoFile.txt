@@ -1,0 +1,12 @@
+Class info: 
+Full name: lab12.Product
+Base type: System.Object
+Is sealed: False
+Is public: False
+Is class: True
+Is Interface: False
+IEnumerator
+Field=Count
+Field=Stat
+Field=Info
+Field=Cost
